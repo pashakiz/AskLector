@@ -39,23 +39,49 @@ $(document).ready(function() {
 
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
-	$("form").submit(function() {
+	$("form#form-takepart").submit(function() {
+		var email = $(this).find(".form-takepart__email").val();
+		var pattern = /.+@.+\..+/i;
+		if (!pattern.test(email)) {
+			alert("Введите корректный E-mail адрес!");
+			return false;
+		}
 		$.ajax({
 			type: "POST",
 			url: "mail.php",
-			data: $("form").serialize(),
+			data: $("form#form-takepart").serialize(),
 			success: function(data) {
 				//$('#order_status').html(data);
-				$('#order_status').html('Спасибо, Ваша заявка отправлена!');
+				//$('#order_status').html('Спасибо, Ваша заявка отправлена!');
 			},
 			error:  function(xhr, str){
 				alert('Возникла ошибка: ' + xhr.responseCode);
 			}
 		}).done(function() {
 			alert("Спасибо за заявку!");
-			setTimeout(function() {
-				$.fancybox.close();
-			}, 1000);
+		});
+		return false;
+	});
+	$("form#feedback").submit(function() {
+		var email = $(this).find(".feedback__email").val();
+		var pattern = /.+@.+\..+/i;
+		if (!pattern.test(email)) {
+			alert("Введите корректный E-mail адрес!");
+			return false;
+		}
+		$.ajax({
+			type: "POST",
+			url: "mail.php",
+			data: $("form#feedback").serialize(),
+			success: function(data) {
+				//$('#order_status').html(data);
+				//$('#order_status').html('Спасибо, Ваша заявка отправлена!');
+			},
+			error:  function(xhr, str){
+				alert('Возникла ошибка: ' + xhr.responseCode);
+			}
+		}).done(function() {
+			alert("Спасибо за заявку!");
 		});
 		return false;
 	});

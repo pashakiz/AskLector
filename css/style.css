@@ -222,21 +222,19 @@ header .btn-takepart:active {
 	text-align: center;
 }
 .partners .partner {
-	display: inline-block;
-	margin-right: 70px;
+	display: block;
+	margin: 0 auto 30px;
 	position: relative;
 }
 .partners .partner.mfti {
 	background-image: url(../img/partner-mipt.png);
 	width: 160px;
 	height: 48px;
-	top: -23px;
 }
 .partners .partner.nobi {
 	background-image: url(../img/partner-nobi.png);
 	width: 160px;
 	height: 31px;
-	top: -30px;
 }
 .partners .partner.mami {
 	background-image: url(../img/partner-mami.png);
@@ -247,14 +245,11 @@ header .btn-takepart:active {
 	background-image: url(../img/partner-rosnano.png);
 	width: 110px;
 	height: 83px;
-	top: -5px;
 }
 .partners .partner.rosseti {
 	background-image: url(../img/partner-rosseti.png);
 	width: 160px;
 	height: 47px;
-	top: -25px;
-	margin-right: 0;
 }
 .feedback {
 	background-color: #466A8E;

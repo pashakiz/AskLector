@@ -69,6 +69,27 @@
 	.reviews .review.u3 {
 		margin-right: 0;
 	}
+	.partners .partner {
+		display: inline-block;
+		margin-right: 50px;
+		margin-bottom: 0;
+	}
+	.partners .partner.mfti {
+		top: -23px;
+	}
+	.partners .partner.nobi {
+		top: -30px;
+	}
+	.partners .partner.mami {
+
+	}
+	.partners .partner.rusnano {
+		top: -5px;
+	}
+	.partners .partner.rosseti {
+		top: -25px;
+		margin-right: 0;
+	}
 	#feedback input {
 		text-align: left;
 		margin-top: 6px;
@@ -83,5 +104,8 @@
 @media only screen and (min-width : 1200px) {
 	.container {
 		width: 1030px;
+	}
+	.partners .partner {
+		margin-right: 70px;
 	}
 }

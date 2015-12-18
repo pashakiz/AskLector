@@ -25,17 +25,8 @@ $(document).ready(function() {
 
 	$(".btn-takepart").on("click", function() {
 		$("#form-takepart").slideDown();
-		$(this).hide();
+		$(this).slideUp();
 	});
-
-
-	//Плавный скролл до блока .div по клику на .scroll
-	//Документация: https://github.com/flesler/jquery.scrollTo
-	// $("a.scroll").click(function() {
-	// 	$.scrollTo($(".div"), 800, {
-	// 		offset: -90
-	// 	});
-	// });
 
 	//Аякс отправка форм
 	//Документация: http://api.jquery.com/jquery.ajax/
